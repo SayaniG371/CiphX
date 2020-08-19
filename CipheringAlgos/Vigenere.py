@@ -1,4 +1,6 @@
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 def Enc(txt, k):
+
     # transforming key to length of message
     ls = ""
     i = 0
@@ -10,13 +12,29 @@ def Enc(txt, k):
         i += 1
 
     # Encrypting the message
-    st = ""
-    for i in range(len(txt)):
-        s = ((ord(txt[i]) + ord(ls[i])) % 26) + ord('A')
-        st += chr(s)
+    if txt.isupper():
+        st = ""
+        for i in range(len(txt)):
+            if txt[i] not in chars:
+                st += txt[i]
+                continue
+            s = ((ord(txt[i]) + ord(ls[i])) % 26) + ord('A')
+            st += chr(s)
 
-    return st
+        return st
+    if txt.islower():
+        txt = txt.upper()
+        ls = ls.upper()
+        st = ""
+        for i in range(len(txt)):
+            if txt[i] not in chars:
+                st += txt[i]
+                continue
+            s = ((ord(txt[i]) + ord(ls[i])) % 26) + ord('a')
+            st += chr(s)
+        st = st.lower()
 
+        return st
 
 def Dec(txt, k):
     # transforming key to length of message
@@ -30,9 +48,26 @@ def Dec(txt, k):
         i += 1
 
     # Decrypting the message
-    st = ""
-    for i in range(len(txt)):
-        s = ((ord(txt[i]) - ord(ls[i]) + 26) % 26) + ord('A')
-        st += chr(s)
+    if txt.isupper():
+        st = ""
+        for i in range(len(txt)):
+            if txt[i] not in chars:
+                st += txt[i]
+                continue
+            s = ((ord(txt[i]) - ord(ls[i]) + 26) % 26) + ord('A')
+            st += chr(s)
 
-    return st
+        return st
+    if txt.islower():
+        txt = txt.upper()
+        ls = ls.upper()
+        st = ""
+        for i in range(len(txt)):
+            if txt[i] not in chars:
+                st += txt[i]
+                continue
+            s = ((ord(txt[i]) - ord(ls[i]) + 26) % 26) + ord('a')
+            st += chr(s)
+        st = st.lower()
+
+        return st
