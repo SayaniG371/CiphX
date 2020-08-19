@@ -1,6 +1,5 @@
 # Encoding function for PlayFair Cipher
 
-
 def Enc(strn, inp):
 
     # Index returning function
@@ -15,9 +14,8 @@ def Enc(strn, inp):
         return li
 
     # Creating square key
-    inp = inp.lower()
     li = list(inp)
-    chars = "abcdefghiklmnopqrstuvwxyz"
+    chars = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
     j = 0
     l = []
     lis = []
@@ -44,14 +42,13 @@ def Enc(strn, inp):
     k = l
 
     # Encrypting the message
-    strn.lower()
 
     if (len(strn) % 2) != 0:
-        strn += "z"
+        strn += "Z"
     m = 0
     for ch in strn:
-        if ch == "j":
-            strn.replace("i", m)
+        if ch == "J":
+            strn.replace("I", m)
         m += 1
     li = []
     lis = []
@@ -103,9 +100,8 @@ def Dec(strn, inp):
         return li
 
     # Creating square key
-    inp = inp.lower()
     li = list(inp)
-    chars = "abcdefghiklmnopqrstuvwxyz"
+    chars = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
     j = 0
     l = []
     lis = []
@@ -164,7 +160,7 @@ def Dec(strn, inp):
             msg = msg + k[r1][(c1 - 1) % 5] + k[r2][(c2 - 1) % 5]
         else:
             msg = msg + k[r1][c2] + k[r2][c1]
-    if msg[-1] == "z":
+    if msg[-1] == "Z":
         msg = msg[:-1]
 
     return msg
