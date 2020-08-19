@@ -1,4 +1,4 @@
-def convert(txt, key):
+def beaufortconvert(txt, key):
     spl = ['!','@','#','$','%','^','&','*','(',')','<','~',':',';','<','>','?','/']
     for i in key:
         if i in spl:
