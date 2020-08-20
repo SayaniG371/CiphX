@@ -1,6 +1,4 @@
-def enc():
-    s = input("Enter the string to be encrypted: ")
-    k = input("Enter the number: ")
+def enc(s,k):
     e=""
     for letter in s:
         if letter.isupper():
@@ -9,9 +7,7 @@ def enc():
             e += chr((ord(letter) + k - 97) % 26 + 97)
     return e
 
-def dec():
-    s = input("Enter the string to be decrypted: ")
-    k = input("Enter the number: ")
+def dec(s,k):
     d=""
     for letter in s:
         if letter.isupper():
