@@ -7,7 +7,7 @@ def enc():
             e+= chr((ord(letter) + k-65) % 26 + 65)
         else:
             e += chr((ord(letter) + k - 97) % 26 + 97)
-    print(f"Encryted String: {e}")
+    return e
 
 def dec():
     s = input("Enter the string to be decrypted: ")
@@ -18,4 +18,4 @@ def dec():
              d+= chr((ord(letter) + (26-k)-65) % 26 + 65)
         else:
             d+= chr((ord(letter) + (26-k) - 97) % 26 + 97)
-    print(f"Decryted String: {d}")
+    return d
