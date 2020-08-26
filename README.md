@@ -1,6 +1,6 @@
 
 # CIPHX : CIPHERING APP
-#### We have created a ciphering app that will encrypt and decrypt messages. You can choose any ciphering method among CAESAR CIPHER, ATBASH CIPHER, VIGENERE CIPHER, VIGENERE AUTOKEY CIPHER, BEAUFORT CIPHER, BEAUFORT AUTOKEY CIPHER, PLAYFAIR CIPHER, HOMOPHONIC SUBSTITUTION CIPHER, COLUMNER TRANSPOSITION CIPHER .
+#### We have created a ciphering app that will encrypt and decrypt messages. You can choose any ciphering method among CAESAR CIPHER, ATBASH CIPHER, VIGENERE CIPHER, BEAUFORT CIPHER, PLAYFAIR CIPHER, COLUMNER TRANSPOSITION CIPHER and many more.
 
 ##  How to access the app:
 
